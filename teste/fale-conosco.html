@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/style-fale-conosco.css">
+        <title>
+            AstronomyInfo
+        </title>
+        <style>
+            body
+            {
+                background-image: url(img/imgfundo.jpg);
+                background-attachment: fixed;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-color:black;
+            }
+
+            form
+            {
+                background-color: white;
+                max-width: 500px;
+                width: 70%;
+                padding: 20px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            form h3
+            {
+                text-align: center;
+                color: #08183b;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            form input[type=text],form textarea[class=field]
+            {
+                width: 100%;
+                height: 45px;
+                border: 1px solid #ccc;
+                padding-left: 10px;
+                margin: 5px 0;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            form input[type=submit]
+            {
+                width: 100%;
+                height: 40px;
+                cursor: pointer;
+                background: #08183b;
+                color: white;
+                margin: 5px 0;
+                border: 0;
+                border-radius: 20px;
+                transition: 0.4s;
+            }
+
+            form textarea[class=field]
+            {
+                padding-top: 13px;
+                outline: 0;
+            }
+
+            form input[type=submit]:hover
+            {
+                background-color: #051128;
+            }
+
+            form input[type=text]:focus
+            {
+                outline: 0;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="menu-lateral">
+        <input type="checkbox" id="chec">
+        <label for="chec">
+            <img src="img/menuimg.png">
+        </label>
+        <nav>
+            <ul>
+                <li><a href="index.html">INÍCIO</a></li>
+                <li><a href="sistema_solar.html">SISTEMA SOLAR</a></li>
+                <li><a href="buracos negros.html">BURACOS NEGROS</a></li>
+                <li><a href="galaxias.html">GALÁXIAS</a></li>
+            </ul>
+        </nav>
+        </div><!--menulateral-->
+
+        <form>
+            <h3>Encontrou algum problema no site? Contate-nos!</h3>
+            <div class="row">
+                &nbsp;
+              </div>
+            <input id="email" type="text" nome="email" placeholder="Seu e-mail..." required/>
+            <textarea id=mesage class="field" nome="mesage" placeholder="Digite sua mensagem aqui..." required></textarea>
+            <input onclick="myFunction()" type="submit" nome="acao" value="Enviar"/>
+        </form>
+    
+        <script>
+            function myFunction()
+            {
+                alert("Sua mensagem foi enviada. Agradecemos pelo feedback!")
+            }
+
+            var email = document.getElementById('email');
+            
+            email.addEventListener('focus',()=>{
+                email.style.borderColor = "#08183b";
+            })
+            var email = document.getElementById('email');
+            
+            email.addEventListener('blur',()=>{
+                email.style.borderColor = "#ccc";
+            })
+
+            var mesage = document.getElementById('mesage');
+            
+            mesage.addEventListener('focus',()=>{
+                mesage.style.borderColor = "#08183b";
+            })
+
+            var mesage = document.getElementById('mesage');
+            
+            mesage.addEventListener('blur',()=>{
+                mesage.style.borderColor = "#ccc";
+            })
+
+        </script>
+
+
+    </body>
+</html>
